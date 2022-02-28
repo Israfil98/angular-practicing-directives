@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'practicing-directives';
+  title = 'Practicing-directives';
+  showDetails = false;
+  clicks: number[] = [];
+
+  onDetailsToggle() {
+    this.showDetails = !this.showDetails;
+    this.clicks.push(this.clicks.length + 1)
+  }
 }
